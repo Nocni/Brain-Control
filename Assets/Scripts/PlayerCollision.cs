@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public GameObject scoreText;
+    public int score;
     public Player_Movement movement;
+
+    void Start() {
+        score = 0;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -13,16 +20,13 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
         }
     }
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.tag == "Point")
+        {
+            score++;
+            scoreText.GetComponent<Text>().text = score.ToString();
+            other.gameObject.SetActive(false);
+        }
     }
 }
