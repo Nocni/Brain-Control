@@ -9,6 +9,7 @@ public class PlayerCollision : MonoBehaviour
     public int score;
     public Player_Movement movement;
 
+
     void Start() {
         score = 0;
     }
@@ -18,6 +19,8 @@ public class PlayerCollision : MonoBehaviour
         if (collision.collider.tag == "Obstacle")
         {
             movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
+            
         }
     }
     private void OnTriggerEnter(Collider other)
