@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.labstreaminglayer.lsl4unity": {
+      "version": "file:D:/RAF/IMR/LSL4Unity-master",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.4",
       "depth": 0,

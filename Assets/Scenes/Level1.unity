@@ -6604,7 +6604,7 @@ GameObject:
   - component: {fileID: 1350903614}
   - component: {fileID: 1350903613}
   - component: {fileID: 1350903612}
-  - component: {fileID: 1350903617}
+  - component: {fileID: 1350903619}
   - component: {fileID: 1350903618}
   m_Layer: 0
   m_Name: Player
@@ -6705,21 +6705,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1350903617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350903611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5be1468b84cf941964873e7a2c7a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1350903612}
-  forwardForce: 2000
-  sidewaysForce: 50
 --- !u!114 &1350903618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6734,7 +6719,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1884017164}
   score: 5
-  movement: {fileID: 1350903617}
+  movement: {fileID: 0}
+--- !u!114 &1350903619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350903611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cae3d9c4c710f84b992b5fe7672267d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  add: 0.08
+  scale: 7
+  StreamName: toto
 --- !u!1001 &1359954033
 PrefabInstance:
   m_ObjectHideFlags: 0
