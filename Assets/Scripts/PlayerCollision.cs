@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using LSL4Unity.Samples.SimpleInlet;
 
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject scoreText;
     public int score;
-    public Player_Movement movement;
+    public SimpleInletScaleObject movement;
 
 
     void Start() {

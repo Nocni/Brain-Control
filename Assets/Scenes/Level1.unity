@@ -6719,7 +6719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1884017164}
   score: 5
-  movement: {fileID: 0}
+  movement: {fileID: 1350903619}
 --- !u!114 &1350903619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6734,7 +6734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1350903612}
   forwardForce: 2000
-  sidewaysForce: 50
+  sidewaysForce: 5
   StreamName: toto
 --- !u!1001 &1359954033
 PrefabInstance:
