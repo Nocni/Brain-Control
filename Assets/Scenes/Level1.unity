@@ -6732,8 +6732,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cae3d9c4c710f84b992b5fe7672267d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 0.08
-  scale: 7
+  rb: {fileID: 1350903612}
+  forwardForce: 2000
+  sidewaysForce: 50
   StreamName: toto
 --- !u!1001 &1359954033
 PrefabInstance:

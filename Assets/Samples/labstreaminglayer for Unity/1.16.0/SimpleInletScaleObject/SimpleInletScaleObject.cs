@@ -8,9 +8,14 @@ namespace LSL4Unity.Samples.SimpleInlet
     // You probably don't need this namespace. We do it to avoid contaminating the global namespace of your project.
     public class SimpleInletScaleObject : MonoBehaviour
     {
-        float z = 0;
-        public float add = 0.1f;
-        public float scale = 3f;
+        //float z = 0;
+        //public float add = 0.1f;
+        //public float scale = 3f;
+        public Rigidbody rb;
+
+        public float forwardForce = 2000f;
+
+        public float sidewaysForce = 500f;
         /*
          * This example shows the minimal code required to get an LSL inlet running
          * without leveraging any of the helper scripts that come with the LSL package.
@@ -76,11 +81,10 @@ namespace LSL4Unity.Samples.SimpleInlet
         // Update is called once per frame
         void FixedUpdate()
         {
-            z += add;
             if (inlet != null)
             {
                 int samples_returned = inlet.pull_chunk(data_buffer, timestamp_buffer);
-                Debug.Log("Samples returned: " + samples_returned);
+                //Debug.Log("Samples returned: " + samples_returned);
                 if (samples_returned > 0)
                 {
                     // There are many things you can do with the incoming chunk to make it more palatable for Unity.
@@ -93,10 +97,25 @@ namespace LSL4Unity.Samples.SimpleInlet
                     //float y = data_buffer[samples_returned - 1, 1];
                     //float z = data_buffer[samples_returned - 1, 2];
                     //var new_scale = new Vector3(x, y, z);
-                    var new_position = new Vector3(x * scale, 1, z);
-                    //Debug.Log("Setting cylinder scale to " + new_scale);
+                    //var new_position = new Vector3(x * scale, 1, z);
+                    Debug.Log("x: " + x + "Deltatime: " + Time.deltaTime);
                     //gameObject.transform.localScale = new_scale;
-                     gameObject.transform.position = new_position;
+                    //gameObject.transform.position = new_position;
+                    rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+
+                    if (x < 0.5f)
+                    {
+                        rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    }
+                    else if (x > 0.5f)
+                    {
+                        rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    }
+
+                    if (rb.position.y < -1f)
+                    {
+                        FindObjectOfType<GameManager>().EndGame();
+                    }
                 }
             }
         }
