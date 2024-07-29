@@ -1,8 +1,8 @@
 # Brain-Control Game
-A game controlled by brain EEG signals.
+      A game controlled by brain EEG signals.
 
 ## Description
-This is a simple game where a cube moves forward continuously, and the player can control it by moving it left or right. There are two control methods:
+      This is a simple game where a cube moves forward continuously, and the player can control it by moving it left or right. There are two control methods:
 
 **Keyboard Control**: Use the A and D keys to move the cube left or right.
 
@@ -10,8 +10,8 @@ This is a simple game where a cube moves forward continuously, and the player ca
 
 ## How It Works
 ### Keyboard Control
-Press A to move the cube left.
-Press D to move the cube right.
+      Press A to move the cube left.
+      Press D to move the cube right.
 ### EEG Control
 
 1. **Training**:
