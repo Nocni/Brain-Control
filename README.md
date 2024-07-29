@@ -5,7 +5,9 @@ A game controlled by brain EEG signals.
 This is a simple game where a cube moves forward continuously, and the player can control it by moving it left or right. There are two control methods:
 
 **Keyboard Control**: Use the A and D keys to move the cube left or right.
+
 **EEG Control**: Use your brain signals, collected by an EEG device, to control the game. By imagining the cube moving left or right, you can control its movement without any physical input.
+
 ## How It Works
 ### Keyboard Control
 Press A to move the cube left.
