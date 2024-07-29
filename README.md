@@ -14,17 +14,17 @@ Press A to move the cube left.
 Press D to move the cube right.
 ### EEG Control
 
-**Training**:
+1. **Training**:
 
-Train the application using the OpenVibe software. The training process takes about 15-20 minutes to calibrate the system to your brain signals. Each person needs to train the system individually as the brain signals are unique.
+      Train the application using the OpenVibe software. The training process takes about 15-20 minutes to calibrate the system to your brain signals. Each person needs to train the system individually as the brain signals are unique.
 
-**EEG Devices**:
+2. **EEG Devices**:
 
-Compatible with Mobi Smarting and Muse devices. Both have been tested and work well with the game.
+      Compatible with Mobi Smarting and Muse devices. Both have been tested and work well with the game.
 
-**Connection**:
+3. **Connection**:
 
-The connection between the game and the EEG device is established using a Python library and Bluetooth.
+      The connection between the game and the EEG device is established using a Python library and Bluetooth.
 
 ## Prerequisites
 **Hardware**: An EEG device (Mobi Smarting or Muse).
